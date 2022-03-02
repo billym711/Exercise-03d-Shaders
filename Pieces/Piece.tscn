@@ -122,3 +122,17 @@ visible = false
 material = SubResource( 12 )
 position = Vector2( 0, -20 )
 texture = ExtResource( 4 )
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Timer2" type="Timer" parent="."]
+wait_time = 1.896
+autostart = true
+
+[node name="Timer3" type="Timer" parent="."]
+wait_time = 0.5
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer2" to="." method="_on_Timer2_timeout"]
+[connection signal="timeout" from="Timer3" to="." method="_on_Timer3_timeout"]
